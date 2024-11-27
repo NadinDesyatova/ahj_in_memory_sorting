@@ -57,7 +57,7 @@ export default class Table {
           ? (cell.textContent = value)
           : index === 2
             ? (cell.textContent = `(${array[index + 1]})`)
-            : (cell.textContent = array[index - 1].toFixed(2));
+            : (cell.textContent = (+array[index - 1]).toFixed(2));
         cell.setAttribute("class", "cell");
         tableRow.appendChild(cell);
       });
